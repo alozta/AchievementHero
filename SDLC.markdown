@@ -1,7 +1,6 @@
 #Software Development Life Cycle
 Road to keep things simple
 
-#---
 #REQUIREMENTS
 * Allowing user to create own achievements.
 * Saving user data in local using the phone hardware.
@@ -15,25 +14,17 @@ Road to keep things simple
 * Import/Export:
 	Option to import/export history in a file.
 	Allowing some cloud services.
-#---
+
 I hope this project won't end here. I need this app to create this app :p
 
-#---
 #DESIGN
-*Show achievements as timeline.
-#---
+* Show achievements as timeline.
 
-#---
 #IMPLEMENTATION
-#---
 
-#---
 #TEST
-#---
 
-#---
 #MAINTENANCE
-#---
 
 
 
