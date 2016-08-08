@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">AchievementHero</string>
+
+    <!-- Frequencies -->
+    <string name="Today">Today</string>
+    <string name="Daily">Daily</string>
+    <string name="Weekly">Weekly</string>
+    <string name="Soon">Soon</string>
 </resources>
