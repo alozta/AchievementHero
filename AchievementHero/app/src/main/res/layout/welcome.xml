@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:weightSum="1"
+    android:id="@+id/welcome_layout"
+    android:background="#ECE5F9"
+    android:alpha="127">
+
+    <ImageView
+        android:layout_width="315dp"
+        android:layout_height="311dp"
+        android:id="@+id/medal_picture"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:src="@drawable/medal"
+        android:alpha="127" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="64dp"
+        android:text="START"
+        android:id="@+id/start_button"
+        android:layout_gravity="center_horizontal|bottom"
+        android:textSize="30dp"
+        android:textColor="@color/abc_tint_default"
+        android:clickable="true"
+        android:background="@android:color/holo_blue_light" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="WELCOME!"
+        android:id="@+id/welcome"
+        android:layout_gravity="center_horizontal|top"
+        android:textSize="30dp"
+        android:textColor="@color/abc_tint_default"
+        android:background="@android:color/holo_blue_light" />
+</FrameLayout>
