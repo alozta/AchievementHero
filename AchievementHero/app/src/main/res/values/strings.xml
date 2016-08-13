@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Achievement Hero</string>
+    <string name="plus_icon">Plus</string>
+    <string name="action_settings">Settings</string>
 
     <!-- Frequencies -->
     <string name="Today">Today</string>
