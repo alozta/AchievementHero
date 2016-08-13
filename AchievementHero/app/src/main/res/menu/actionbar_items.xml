@@ -5,13 +5,13 @@
     <!-- I think this loads in runtime since we set it from MainActivity.java -->
 
     <item
-        android:id="@+id/plus"
+        android:id="@+id/plus_button"
         android:icon="@drawable/plus_small"
         android:title="@string/plus_icon"
         app:showAsAction="always"/>
 
     <!-- Settings, should always be in the overflow, this should appear as 3 DOTS -->
-    <item android:id="@+id/action_settings"
+    <item android:id="@+id/action_settings_button"
         android:title="@string/action_settings"
         app:showAsAction="never"/>
 </menu>

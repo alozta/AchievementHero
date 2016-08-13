@@ -1,10 +1,14 @@
 package com.alozta.achievementhero;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 /**
  * Created by alozta on 8/9/16.
@@ -12,34 +16,47 @@ import android.view.MenuItem;
  * Includes some Android noob comments
  */
 public class MainActivity extends AppCompatActivity {   // Make this change for every activity in your app that uses a Toolbar as an app bar.
+    MenuItem addEntryItem, moreOptionsItem;
+    Button startButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        Log.i("MainActivity","onCreate");
 
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.main_toolbar);
-        setSupportActionBar(myToolbar); // This method sets the toolbar as the app bar for the activity
-                                        // By default, the action bar contains just the name of the app and an overflow menu.
-        myToolbar.inflateMenu(R.menu.actionbar_items);
-    }
+        //Starts with welcome layout
+        setContentView(R.layout.welcome);
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_settings:
-                // User chose the "Settings" item, show the app settings UI...
-                return true;
+        startButton = (Button)findViewById(R.id.start_button);
+        startButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setContentView(R.layout.main);  //Load main layout
 
-            case R.id.plus:
-                // User chose the "Plus" action, add a new item
-                return true;
+                addEntryItem = (MenuItem) findViewById(R.id.plus_button);            //add buttons to toolbar
+                moreOptionsItem = (MenuItem) findViewById(R.id.action_settings_button);
 
-            default:
-                // If we got here, the user's action was not recognized.
-                // Invoke the superclass to handle it.
-                return super.onOptionsItemSelected(item);
+                Toolbar myToolbar = (Toolbar) findViewById(R.id.main_toolbar);
+                myToolbar.inflateMenu(R.menu.actionbar_items);
+                myToolbar.setTitle(R.string.app_name);
+                myToolbar.setOnMenuItemClickListener(
+                        new Toolbar.OnMenuItemClickListener() {
+                            @Override
+                            public boolean onMenuItemClick(MenuItem item) {
+                                // Handle menu item click event
+                                switch (item.getItemId()) {
+                                    case R.id.plus_button:
+                                        Log.i("MainActivity","PLUS");
+                                        return true;
+                                    case R.id.action_settings_button:
+                                        Log.i("MainActivity","MORE");
+                                        return true;
+                                }
+                                return false;
+                            }
+                        });
+            }
+        });
 
-        }
     }
 }
